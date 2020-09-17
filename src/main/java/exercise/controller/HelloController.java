@@ -22,12 +22,12 @@ public class HelloController {
 
     @GetMapping("/addName")
     @ResponseBody
-    public String addName(@RequestParam(required = false) String name) {
+    public boolean addName(@RequestParam(required = false) String name) {
         if(name != null) {
             names.add(name);
-            return "Success";
+            return true;
         }
 
-        return "Failed";
+        return false;
     }
 }

@@ -17,8 +17,8 @@ class ExerciseApplicationTests {
 
 	@Test
 	void addTest() {
-		assert(helloController.addName(null).equals("Failed"));
-		assert(helloController.addName("test").equals("Success"));
+		assert(!helloController.addName(null));
+		assert(helloController.addName("test"));
 		assert(helloController.names.contains("test"));
 	}
 
